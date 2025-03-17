@@ -19,9 +19,12 @@ export default function Homepage() {
 
     try {
       // Send the message to your server endpoint
-      const response = await axios.post("http://localhost:5005/ai/ai-chat", {
-        message: trimmedInput,
-      });
+      const response = await axios.post(
+        "https://ai-chat-server-624z.onrender.com/ai/ai-chat",
+        {
+          message: trimmedInput,
+        }
+      );
       const reply = response.data.reply;
       const aiMessage = { role: "ai", text: reply };
       setMessages((prev) => [...prev, aiMessage]);
