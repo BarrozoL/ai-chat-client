@@ -41,9 +41,8 @@ export default function Homepage() {
 
   return (
     <div className="max-w-xl mx-auto p-4 flex flex-col h-screen bg-gradient-to-r from-blue-100 to-purple-100">
-      <h1 className="text-3xl font-bold text-center mb-4">Chat-Barrozo</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">Chat-Agent</h1>
 
-      {/* Chat messages container */}
       <div className="flex-1 border rounded-lg p-4 overflow-y-auto space-y-4 bg-gray-50">
         {messages.map((msg, index) => (
           <div
@@ -83,7 +82,7 @@ export default function Homepage() {
         />
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 rounded-r-lg"
+          className="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white px-4 rounded-r-lg"
           disabled={loading}
         >
           Send
